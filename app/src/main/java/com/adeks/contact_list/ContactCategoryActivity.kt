@@ -18,6 +18,7 @@ class ContactCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityContactCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        title = "Contact Category"
         categoryAdapter = CategoryAdapter(this)
         setUpData(binding)
     }
@@ -31,6 +32,10 @@ class ContactCategoryActivity : AppCompatActivity() {
         val saveBtn = view.findViewById<Button>(R.id.save_cat)
         val cat = view.findViewById<TextView>(R.id.categoryEt)
         val alertDialog = builder.create()
+        val defaultCategories = listOf(Category("Family"), Category("Friends"), Category("Colleague"),
+            Category("Work")
+        )
+        categoryAdapter.setUpCategoryList(defaultCategories)
         saveBtn.setOnClickListener {
             if (cat.text.toString() != "") {
                 val category = Category(cat.text.toString())
