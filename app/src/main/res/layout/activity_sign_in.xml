@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity"
     android:padding="20dp">
+
     <ImageView
         android:id="@+id/signinimage"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_width="265dp"
+        android:layout_height="202dp"
         android:src="@drawable/ic_undraw_profile_data_re_v81r"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_signin_il"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
